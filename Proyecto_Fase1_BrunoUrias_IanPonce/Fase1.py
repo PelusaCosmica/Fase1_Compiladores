@@ -392,7 +392,7 @@ class MiniLangGUI:
         self.txt_errors.pack(fill=tk.BOTH, expand=True, padx=5, pady=5)
 
     def load_file(self):
-        file_path = filedialog.askopenfilename(filetypes=[("MiniLang Files", "*.ming"), ("Text Files", "*.txt")])
+        file_path = filedialog.askopenfilename(filetypes=[("MiniLang Files", "*.mlng"), ("Text Files", "*.txt")])
         if file_path:
             with open(file_path, 'r', encoding='utf-8') as f:
                 content = f.read()
@@ -440,4 +440,5 @@ class MiniLangGUI:
 if __name__ == "__main__":
     root = tk.Tk()
     app = MiniLangGUI(root)
+
     root.mainloop()
